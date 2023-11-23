@@ -1,2 +1,2 @@
-my_name="Hassan Sagheer";
+my_name=input("What's your name?")
 print("Hello and welcome " + my_name + "!");
