@@ -1,2 +1,2 @@
-my_name=input("What's your name?")
-print("Hello and welcome " + my_name + "!");
+user_name=input("What's your name? ")
+print(f"Hello and welcome {user_name}", end="!")
