@@ -1,8 +1,8 @@
 class computer:
 	def config(self):
-		print("corei5, 16gb, 1TB");
+		print("corei5, 16gb, 1TB")
 
 
-com = computer();
+com = computer()
 
-com.config();
+com.config()
