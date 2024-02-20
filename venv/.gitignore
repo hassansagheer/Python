@@ -1,0 +1,5 @@
+# Exclude virtual environment files and folders
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
