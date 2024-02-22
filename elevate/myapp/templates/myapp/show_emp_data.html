@@ -1,4 +1,3 @@
-<!-- pwd_emp_template.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +28,7 @@
                 <th>Name</th>
                 <th>CNIC</th>
                 <th>OFFICE</th>
+                <th style="border: none;"><button type="submit" class="btn btn-success"><a href="{% url 'insert_emp_data' %}" style="text-decoration: none; color:black;">Insert Data</a></button></th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +38,8 @@
                     <td>{{ emp.emp_name }}</td>
                     <td>{{ emp.emp_cnic }}</td>
                     <td>{{ emp.office }}</td>
+                    <td style="border: none;"><button type="submit" class="btn btn-success"><a href="/update_emp_data/{{emp.pk}}" style="text-decoration: none; color:black;">Update</a></button></td>
+                    <td style="border: none;"><button type="submit" class="btn btn-success"><a href="/delete_emp_data/{{emp.pk}}" style="text-decoration: none; color:black;">Delete</a></button></td>
                 </tr>
             {% endfor %}
         </tbody>
