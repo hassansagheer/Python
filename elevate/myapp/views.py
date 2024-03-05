@@ -19,6 +19,7 @@ def display_date(request):
 # Show Employee
 def show_emp_data(request):
     emp_data = pwd_emp.objects.all()  # Retrieve all records
+    # emp_data = pwd_emp.objects.filter(emp_id=258) # Retrive only Filtered record
     return render(request, 'myapp/show_emp_data.html', {'emp_data': emp_data})
 
 # Insert Employee
