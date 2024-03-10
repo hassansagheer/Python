@@ -80,4 +80,5 @@ def form(request):
             return HttpResponse('Form successfully submitted')
     else:
         form = ApplicationForm()  # Instantiate the form for GET requests
-    return render(request, 'myapp/form.html', {'form': form})
+        context = {'form': form}
+    return render(request, 'myapp/form.html', context)
