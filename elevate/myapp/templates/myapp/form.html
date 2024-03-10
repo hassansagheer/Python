@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action="/form" action="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!-- <table>
+            <tr>
+                <th><label for="id_name">Name of Applicant:</label></th>
+                <td>
+                    <input type="text" name="name" maxlength="50" required id="id_name">
+                </td>
+            </tr>
+        
+            <tr>
+                <th><label for="id_address">Address:</label></th>
+                <td>
+                    <input type="text" name="address" maxlength="100" required id="id_address">
+                </td>
+            </tr>
+        
+            <tr>
+                <th><label for="id_field">Field:</label></th>
+                <td>
+                    <select name="field" id="id_field">
+                        <option value="Manager">Manager</option>
+                        <option value="Cashier">Cashier</option>
+                        <option value="Operator">Operator</option>
+                    </select>
+                </td>
+            </tr>
+        </table> -->
+        <input type="submit">
+</body>
+</html>

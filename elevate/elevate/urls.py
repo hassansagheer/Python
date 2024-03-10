@@ -39,4 +39,5 @@ urlpatterns = [
     path('insert_emp_data/', views.insert_emp_data, name='insert_emp_data'),
     path('delete_emp_data/<int:pk>', views.delete_emp_data, name='delete_emp_data'),
     path('update_emp_data/<int:pk>', views.update_emp_data, name='update_emp_data'),
+    path('form/', views.form, name='form'),
 ]

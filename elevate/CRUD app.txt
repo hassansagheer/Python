@@ -1,1 +1,2 @@
 myapp application in project elevate is CRUD application.
+and forms.py is a Django Class forms

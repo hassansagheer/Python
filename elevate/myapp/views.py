@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from datetime import datetime
 from . models import pwd_emp
+from .forms import ApplicationForm
 
 # Create your views here.
 def index_page(request):
@@ -66,3 +67,17 @@ def delete_emp_data(request, pk):
     }
 
     return render(request, 'myapp/delete_emp_data.html', context)
+
+# Django Forms
+def form(request):       
+    if request.method == 'POST':
+        form = ApplicationForm(request.POST)  # Instantiate the form with POST data
+        if form.is_valid():
+            name = form.cleaned_data['name'] 
+            address = form.cleaned_data['address'] 
+            posts = form.cleaned_data['posts']
+            # Process the form data here (e.g., save to database, send email, etc.)
+            return HttpResponse('Form successfully submitted')
+    else:
+        form = ApplicationForm()  # Instantiate the form for GET requests
+    return render(request, 'myapp/form.html', {'form': form})
