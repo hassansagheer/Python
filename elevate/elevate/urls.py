@@ -29,6 +29,7 @@ Including another URLconf
 from django.contrib import admin 
 from django.urls import path 
 from myapp import views
+from reservationform_little_lemon import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -40,4 +41,5 @@ urlpatterns = [
     path('delete_emp_data/<int:pk>', views.delete_emp_data, name='delete_emp_data'),
     path('update_emp_data/<int:pk>', views.update_emp_data, name='update_emp_data'),
     path('form/', views.form, name='form'),
+    # path('booking/', views.booking, name='booking'),
 ]
