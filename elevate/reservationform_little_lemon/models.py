@@ -7,3 +7,6 @@ class Booking(models.Model):
     guest_count = models.IntegerField()
     reservation_time = models.DateTimeField(auto_now=True)
     comments = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.first_name
