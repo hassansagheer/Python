@@ -38,8 +38,8 @@
                     <td>{{ emp.emp_name }}</td>
                     <td>{{ emp.emp_cnic }}</td>
                     <td>{{ emp.office }}</td>
-                    <td style="border: none;"><button type="submit" class="btn btn-success"><a href="/update_emp_data/{{emp.pk}}" style="text-decoration: none; color:black;">Update</a></button></td>
-                    <td style="border: none;"><button type="submit" class="btn btn-success"><a href="/delete_emp_data/{{emp.pk}}" style="text-decoration: none; color:black;">Delete</a></button></td>
+                    <td style="border: none;"><button type="submit" class="btn btn-success"><a href="/myapp/update_emp_data/{{emp.pk}}" style="text-decoration: none; color:black;">Update</a></button></td>
+                    <td style="border: none;"><button type="submit" class="btn btn-success"><a href="/myapp/delete_emp_data/{{emp.pk}}" style="text-decoration: none; color:black;">Delete</a></button></td>
                 </tr>
             {% endfor %}
         </tbody>

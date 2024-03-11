@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <form action="/form" action="POST">
+    <form action="/myapp/form" action="POST">
         {% csrf_token %}
         {{form.as_p}}
         <!-- <table>

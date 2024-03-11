@@ -27,19 +27,10 @@ Including another URLconf
 # ========================================================== #
 
 from django.contrib import admin 
-from django.urls import path 
-from myapp import views
-from reservationform_little_lemon import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index_page/', views.index_page, name='index_page'),
-    path('home_page/', views.home_page, name='home_page'),
-    path('display_date/', views.display_date, name='display_date'),
-    path('show_emp_data/', views.show_emp_data, name='show_emp_data'),
-    path('insert_emp_data/', views.insert_emp_data, name='insert_emp_data'),
-    path('delete_emp_data/<int:pk>', views.delete_emp_data, name='delete_emp_data'),
-    path('update_emp_data/<int:pk>', views.update_emp_data, name='update_emp_data'),
-    path('form/', views.form, name='form'),
-    # path('booking/', views.booking, name='booking'),
+    path('myapp/', include('myapp.urls')),
+    path('reservationform_little_lemon/', include('reservationform_little_lemon.urls')),
 ]
