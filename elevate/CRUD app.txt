@@ -1,2 +1,3 @@
 myapp application in project elevate is CRUD application.
-and forms.py is a Django Class forms
+forms.py is a Django Class forms.
+reservationform_little_lemon application in project elevate is connected with database.
