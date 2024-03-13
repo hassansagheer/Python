@@ -17,6 +17,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -64,7 +65,14 @@ ROOT_URLCONF = 'elevate.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # Add the project-level template directory
+            os.path.join(BASE_DIR, 'templates'),
+            # Add the template directories for your apps
+            os.path.join(BASE_DIR, 'myapp', 'templates'),
+            os.path.join(BASE_DIR, 'reservationform_little_lemon', 'templates'),
+            os.path.join(BASE_DIR, 'myapp_classbased_views', 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
