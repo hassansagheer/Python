@@ -4,6 +4,10 @@ from .models import Booking
 from .forms import BookingForm
 
 # Create your views here.
+def index_page_reservationform_little_lemon(request):
+    content = "<html><body><h1>Hello, world!</h1><h2>This is the Index Page view of reservationform_little_lemon.</h2></body></html>"
+    return HttpResponse(content)
+
 def booking(request):       
     if request.method == 'POST':
         first_name = request.POST['first_name']

@@ -5,7 +5,7 @@ from . models import pwd_emp
 from .forms import ApplicationForm
 
 # Create your views here.
-def index_page(request):
+def index_page_myapp(request):
     content = "<html><body><h1>Hello, world!</h1><h2>This is the Index Page view of myapp.</h2></body></html>"
     return HttpResponse(content) 
 

@@ -1,0 +1,7 @@
+The most frequently used generic views are:
+- TemplateView
+- CreateView
+- ListView
+- DetailView
+- UpdateView
+- LoginView

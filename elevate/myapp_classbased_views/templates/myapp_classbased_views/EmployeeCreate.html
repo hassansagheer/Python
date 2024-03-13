@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employee Data</title>
+</head>
+<style>
+    table {
+        border: 5px outset;
+        border-radius: 10px;
+        border-spacing: 10px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <h2 style="text-align:center;">Enter Details of Employee</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table style="width:50%; text-align:left;">
+            <tr>
+                <td>Employee ID</td>
+                <td><input type="text" placeholder="Enter Employee ID" name="emp_id"></td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td><input type="text" placeholder="Enter Employee Name" name="emp_name"></td>
+            </tr>
+            <tr>
+                <td>Employee CNIC</td>
+                <td><input type="text" placeholder="Enter Employee CNIC" name="emp_cnic"></td>
+            </tr>
+            <tr>
+                <td>Office</td>
+                <td><select name="office">
+                        <option selected disabled=true>Select Office</option>
+                        <option>CEN IBD</option>
+                        <option>DG OFFICE IBD</option>
+                        <option>CCC-II IBD</option>
+                        <option>CCD-III IBD</option>
+                        <option>CEW QTA</option>
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" class="btn btn-success"><a href="{% url 'EmployeeCreate' %}" style="text-decoration: none; color:black;">Back</a></button></td>
+                <td colspan="2" style="text-align:left;"><input type="submit" class="btn btn-success"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

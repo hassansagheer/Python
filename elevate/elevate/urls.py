@@ -17,9 +17,12 @@ Including another URLconf
 
 from django.contrib import admin 
 from django.urls import include, path
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index_page_elevate, name='index_page_elevate'), 
     path('myapp/', include('myapp.urls')),
     path('reservationform_little_lemon/', include('reservationform_little_lemon.urls')),
+    path('myapp_classbased_views/', include('myapp_classbased_views.urls')),
 ]

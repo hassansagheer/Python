@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    'reservationform_little_lemon'
+    'reservationform_little_lemon',
+    'myapp_classbased_views',
 ]
 
 MIDDLEWARE = [
