@@ -10,11 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-# import environ
-
-# env = environ.Env()
-# env.read_env()
-
 
 from pathlib import Path
 import os
@@ -27,7 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = env("SECRET_KEY", default="unsafe-secret-key")
 SECRET_KEY = 'django-insecure-+8=2(lnaahebosgg8j=bq0q*3(!im1!__(r)5uh2v@2d5*d-ou'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -99,18 +93,6 @@ WSGI_APPLICATION = 'elevate.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': env("DATABASE_NAME"),
-#         'USER': env("DATABASE_USER"),
-#         'PASSWORD': env("DATABASE_PASSWORD"),
-#         'HOST': env("DATABASE_HOST"),
-#         'PORT': env("DATABASE_PORT"),
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -119,6 +101,11 @@ DATABASES = {
         'PASSWORD': 'superuser',
         'HOST': 'localhost',
         'PORT': '5432',
+    },
+    'mongodb': {
+        'ENGINE': 'djongo',
+        'NAME': 'my_mongodb_db',
+        # Other MongoDB settings...
     }
 }
 
