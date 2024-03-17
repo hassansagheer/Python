@@ -99,11 +99,6 @@ DATABASES = {
         'PASSWORD': 'superuser',
         'HOST': 'localhost',
         'PORT': '5432',
-    },
-    'mongodb': {
-        'ENGINE': 'djongo',
-        'NAME': 'my_mongodb_db',
-        # Other MongoDB settings...
     }
 }
 
