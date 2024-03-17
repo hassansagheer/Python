@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'reservationform_little_lemon',
-    'myapp_classbased_views',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +64,6 @@ TEMPLATES = [
             # Add the template directories for your apps
             os.path.join(BASE_DIR, 'myapp', 'templates'),
             os.path.join(BASE_DIR, 'reservationform_little_lemon', 'templates'),
-            os.path.join(BASE_DIR, 'myapp_classbased_views', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
