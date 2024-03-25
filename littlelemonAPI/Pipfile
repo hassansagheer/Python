@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 djangorestframework-xml = "*"
 djangorestframework = "*"
+bleach = "*"
 
 [dev-packages]
 
