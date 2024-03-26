@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'littlelemonDRF',
     'rest_framework',
     'rest_framework.authtoken',
-    'littlelemonDRF',
+    'djoser',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +134,11 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
         'rest_framework_xml.renderers.XMLRenderer', 
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
     'DEFAULT_FILTER_BACKENDS': [
         'rest_framework.filters.OrderingFilter',
         'rest_framework.filters.SearchFilter',
@@ -143,6 +151,17 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 3,
     'DEFAULT_THROTTLE_RATES': {
         'anon': '2/minute',
-        'user': '10/minute'
+        'user': '5/minute',
+        'ten': '10/minute',
     }
+}
+
+DJOSER = {
+    "USER_ID_FIELD": "username",
+    # "LOGIN_FIELD": "email",
+}
+
+from datetime import timedelta
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
 }
